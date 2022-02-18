@@ -2,9 +2,10 @@
   "name": "typechain",
   "version": "1.0.0",
   "description": "Buildling a blockchain using TypeScript",
+  "repository": "https://github.com/Sushovan99/Typechain.git",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc-watch --onSuccess \"node ./dist/index.js\""
   },
   "author": "Sushovan Biswas",
   "license": "ISC"
