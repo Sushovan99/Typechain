@@ -4,11 +4,15 @@ interface IPerson {
   isMarried: boolean;
 }
 
-const person: IPerson = {
-  name: "Eren Yaeger",
-  age: 22,
-  isMarried: false,
-};
+class Human {
+  constructor(
+    public name: string,
+    public age: number,
+    public isMarried: boolean
+  ) {}
+}
+
+const ishida = new Human("Ishida Nara", 25, false);
 
 const intro = (person: IPerson): void => {
   console.log(
@@ -18,4 +22,4 @@ const intro = (person: IPerson): void => {
   );
 };
 
-intro(person);
+intro(ishida);
