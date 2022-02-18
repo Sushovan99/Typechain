@@ -1,21 +1,21 @@
-interface IPerson {
-  name: string;
-  age: number;
-  isMarried: boolean;
+class Block {
+  constructor(
+    public index: number,
+    public hash: string,
+    public prevHash: string,
+    public data: string,
+    public timeStamp: number
+  ) {}
 }
 
-const person: IPerson = {
-  name: "Eren Yaeger",
-  age: 22,
-  isMarried: false,
-};
+const genesisBlock: Block = new Block(
+  0,
+  "sdfdf334324",
+  "",
+  "Hello world!",
+  18022022
+);
 
-const intro = (person: IPerson): void => {
-  console.log(
-    `My name is ${person.name}, my age is ${person.age} & I'm ${
-      person.isMarried ? "married" : "not married"
-    }`
-  );
-};
+let blockChain: [Block] = [genesisBlock];
 
-intro(person);
+console.log(blockChain);
