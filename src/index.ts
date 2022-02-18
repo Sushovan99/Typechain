@@ -1,13 +1,21 @@
-const personName: string = "Nicholas Hoult";
-const age: number = 23;
-const isMarried: boolean = false;
+interface IPerson {
+  name: string;
+  age: number;
+  isMarried: boolean;
+}
 
-const personBio = (name: string, age: number, isMarried: boolean): void => {
+const person: IPerson = {
+  name: "Eren Yaeger",
+  age: 22,
+  isMarried: false,
+};
+
+const intro = (person: IPerson): void => {
   console.log(
-    `My name is ${name}, my age is ${age} & I'm ${
-      isMarried ? "not married" : "married"
+    `My name is ${person.name}, my age is ${person.age} & I'm ${
+      person.isMarried ? "married" : "not married"
     }`
   );
 };
 
-personBio(personName, age, isMarried);
+intro(person);
