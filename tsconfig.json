@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "CommonJs",
+    "target": "ES2015",
+    "outDir": "dist"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
